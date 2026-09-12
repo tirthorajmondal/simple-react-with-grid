@@ -1,6 +1,6 @@
 
 
-const MyStats = ({ handleRemoveFromStack, selectedTechs }) => {
+const MyStats = ({ handleRemoveFromStack, selectedTechs, clearAll }) => {
     return (
         <div className="border rounded-xl p-5 h-fit w-full lg:w-1/4 ">
             <h2 className="font-bold text-lg">
@@ -33,6 +33,9 @@ const MyStats = ({ handleRemoveFromStack, selectedTechs }) => {
                             </li>
 
                         ))}
+                        <button onClick={clearAll} className="text-blue-500 hover:text-blue-700 bg-blue-50 p-2 rounded-lg">
+                            Clear All
+                        </button>
                     </ul>
                 </div>
             }

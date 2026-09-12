@@ -27,7 +27,9 @@ const AvailableTechnologies = () => {
     };
 
 
-
+    const clearAll =() => {
+        setSelectedTechs([]); // Clear the selected technologies
+    }
 
     const fetchTechnologies = async () => {
         try {
@@ -58,7 +60,9 @@ const AvailableTechnologies = () => {
                     handleAddToStack={handleAddToStack} />
                 <MyStats
                     selectedTechs={selectedTechs}
-                    handleRemoveFromStack={handleRemoveFromStack} />
+                    handleRemoveFromStack={handleRemoveFromStack}
+                    clearAll={clearAll}
+                />
             </div>
         </section>
     );
